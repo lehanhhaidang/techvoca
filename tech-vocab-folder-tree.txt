@@ -1,0 +1,39 @@
+tech-vocab-trainer/
+│
+├─ backend/
+│   ├─ node-api/                   # Node.js API cho Flashcards + Quiz + Categories + User Progress
+│   │   ├─ controllers/            # Chỉ xử lý request/response
+│   │   ├─ services/               # Logic xử lý, business rules
+│   │   ├─ models/                 # ORM / DB schema
+│   │   ├─ routes/                 # Route definitions
+│   │   ├─ middlewares/            # Auth, validation, logging
+│   │   ├─ utils/                  # Helper functions
+│   │   └─ index.js                 # Entry point
+│   │
+│   ├─ laravel-admin/               # Laravel + Blade cho Admin / Auth / Settings
+│   │   ├─ app/
+│   │   │   ├─ Http/Controllers/   # Admin CRUD + Auth
+│   │   │   ├─ Models/
+│   │   │   └─ Services/           # Business logic admin (tách biệt)
+│   │   ├─ resources/views/        # Blade templates
+│   │   └─ routes/web.php           # Web routes admin
+│   │
+│   └─ shared-db/                   # Database config, migrations, seeds
+│
+├─ frontend/
+│   └─ react-spa/                   # React SPA chính cho Flashcards + Quiz
+│       ├─ src/
+│       │   ├─ components/          # Reusable components (cards, buttons, modals)
+│       │   ├─ pages/               # Dashboard, Flashcards, Quiz, Categories
+│       │   ├─ services/            # API calls to Node.js backend
+│       │   ├─ hooks/               # Custom hooks
+│       │   └─ utils/               # Helpers
+│       └─ public/
+│
+├─ tests/                            # Unit / Integration tests
+│   ├─ backend/
+│   └─ frontend/
+│
+├─ docker-compose.yml                 # Optional, dev / production environment
+├─ .env                              # Environment variables
+└─ README.md

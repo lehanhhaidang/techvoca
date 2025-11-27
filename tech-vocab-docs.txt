@@ -1,0 +1,84 @@
+1️⃣ Sơ lược mô tả dự án (dành cho người non-tech)
+
+Tech Vocabulary Trainer là một webapp giúp người dùng học và ghi nhớ các thuật ngữ, khái niệm công nghệ thông qua flashcards và quiz, với trải nghiệm mượt mà nhờ SPA.
+
+Người dùng có thể:
+
+Chọn chủ đề hoặc lĩnh vực muốn học.
+
+Xem flashcards gồm thuật ngữ, giải thích và ví dụ minh họa.
+
+Làm quiz để kiểm tra kiến thức.
+
+Theo dõi tiến độ học tập, nhận badges hoặc điểm thưởng để tạo động lực.
+
+Nói ngắn gọn: đây là nền tảng học thuật ngữ công nghệ, giúp học viên ghi nhớ kiến thức nhanh và hiệu quả, tập trung vào trải nghiệm học cá nhân.
+
+2️⃣ Công nghệ sử dụng trong dự án
+
+Backend: Node.js (API chính cho flashcards + quiz)
+
+Backend hỗ trợ / Admin: Laravel (Blade + API cho admin, auth, settings)
+
+Frontend SPA: React.js (trọng tâm flashcards + quiz)
+
+Frontend Template / Admin / Auth pages: Laravel Blade
+
+Database: MySQL hoặc PostgreSQL
+
+Optional / Hỗ trợ: Redis (cache/session), Tailwind CSS, Vite (build React/JS)
+
+3️⃣ Các module trong dự án
+
+Authentication / Authorization
+
+Login, register, forgot password
+
+Phân quyền: User / Admin
+
+Dashboard & User Profile
+
+Theo dõi tiến độ học flashcards, quiz
+
+Xem badges / achievement
+
+Categories / Learning Path
+
+Quản lý các chủ đề, kỹ năng, hoặc độ khó
+
+Gợi ý lộ trình học
+
+Flashcards
+
+Trọng tâm dự án
+
+Front: Tiếng Anh (term + description + example)
+
+Back: Tiếng Việt giải thích
+
+Quiz
+
+Kiểm tra kiến thức qua nhiều dạng câu hỏi
+
+Toggle hiển thị nghĩa tiếng Việt nếu muốn
+
+Admin Module
+
+CRUD flashcards, quiz, categories
+
+Quản lý users
+
+Xem thống kê người học, badges, tiến độ
+
+Chỉ dùng Laravel Blade + API, không ảnh hưởng SPA học tập
+
+4️⃣ Công nghệ phù hợp cho từng module
+Module	Công nghệ chính	Ghi chú
+Authentication / Authorization	Laravel Blade + Laravel API	Blade cho login/register/forgot password, backend Laravel xử lý auth
+Dashboard & User Profile	React SPA + Node.js API	Lấy dữ liệu flashcards, quiz, badges từ Node API
+Categories / Learning Path	React SPA + Node.js API	Quản lý và hiển thị danh mục học, filter, search
+Flashcards	React SPA + Node.js API	Trọng tâm UX, front-end SPA tối ưu trải nghiệm học thuật ngữ
+Quiz	React SPA + Node.js API	SPA đa dạng dạng câu hỏi, toggle dịch sang VN, lưu kết quả qua Node API
+Admin Module	Laravel Blade + Laravel API	CRUD flashcards, quiz, categories; thống kê người học; Blade giữ UX admin đơn giản
+Database	MySQL / PostgreSQL	Lưu flashcards, quiz, users, categories, badges; tất cả module dùng chung
+Cache / Session / Background Jobs	Redis / Laravel Queue (optional)	Hỗ trợ cache, session, background tasks nếu cần
